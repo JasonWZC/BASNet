@@ -16,9 +16,9 @@ You can set the training model and parameters in `BASNet/train.py`.
 ```ruby
 python train.py
 ```
-## Test  
-After training, you can put weight in `BASNet/predict/plot_demo`.  
-Then use plot_demo.py to generate a prediction graph.
+## Prediction  
+After training, you can put weight in `BASNet/predict/plot_demo.py`.  
+Then use it to generate a prediction graph.
 ```ruby
 python plot_demo.py
 ```
