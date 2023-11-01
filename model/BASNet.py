@@ -196,7 +196,7 @@ class BASNet(nn.Module):
         #==================Backbone=========================#
         self.resnet = resnet18()
         if pretrained:
-            self.resnet.load_state_dict(torch.load('./pretrain/resnet18-5c106cde.pth'))
+            self.resnet.load_state_dict(torch.load('./model/pretrain/resnet18-5c106cde.pth'))
 
         self.resnet.layer4 = nn.Identity()
         bc = 256  # the bottom_ch of the last layer

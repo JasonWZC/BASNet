@@ -1,9 +1,28 @@
 # BASNet
 
-## 1. Environment setup
-This code has been tested on the workstation with Python 3.9, Pytorch 1.13.1, CUDA 11.7.
-
-## 2. Download the datesets:
+## Environment setup
+```ruby
+cuda: 11.7  
+python: 3.9  
+pytorch: 1.13.1  
+```
+## Installation
+```ruby
+git clone https://github.com/JasonWZC/BASNet-main.git 
+cd BASNet-main 
+```
+## Train
+You can set the training model and parameters in `BASNet/train.py`.
+```ruby
+python train.py
+```
+## Test  
+After training, you can put weight in `BASNet/predict/plot_demo`.  
+Then use plot_demo.py to generate a prediction graph.
+```ruby
+python plot_demo.py
+```
+## Download the datesets
 * LEVIR-CD:
   [LEVIR-CD](https://justchenhao.github.io/LEVIR/)
 
@@ -12,5 +31,7 @@ This code has been tested on the workstation with Python 3.9, Pytorch 1.13.1, CU
 
 * GZ-CD:
   [GZ-CD](https://github.com/daifeng2016/Change-Detection-Dataset-for-High-Resolution-Satellite-Imagery)
+
+You can install these datasets to './datasets'. And we have provided a small dataset called TEST for your testing.
 
   

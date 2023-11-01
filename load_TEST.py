@@ -6,12 +6,12 @@ import random
 import torchvision.transforms.functional as tf
 
 def read_images():
-    imgs_Atrain = glob.glob('./datasets/LEVIR/train' + '\\A\\*.png')
-    imgs_Btrain = glob.glob('./datasets/LEVIR/train' + '\\B\\*.png')
-    labelstrain = glob.glob('./datasets/LEVIR/train' + '\\label\\*.png')
-    imgs_Atest = glob.glob('./datasets/LEVIR/test' + '\\A\\*.png')
-    imgs_Btest = glob.glob('./datasets/LEVIR/test' + '\\B\\*.png')
-    labelstest = glob.glob('./datasets/LEVIR/test' + '\\label\\*.png')
+    imgs_Atrain = glob.glob('./datasets/TEST/train' + '\\A\\*.png')
+    imgs_Btrain = glob.glob('./datasets/TEST/train' + '\\B\\*.png')
+    labelstrain = glob.glob('./datasets/TEST/train' + '\\label\\*.png')
+    imgs_Atest = glob.glob('./datasets/TEST/test' + '\\A\\*.png')
+    imgs_Btest = glob.glob('./datasets/TEST/test' + '\\B\\*.png')
+    labelstest = glob.glob('./datasets/TEST/test' + '\\label\\*.png')
     return imgs_Atrain, imgs_Btrain, labelstrain, imgs_Atest, imgs_Btest, labelstest
 
 """
@@ -74,9 +74,9 @@ class BuildingChangeDataset(torch.utils.data.Dataset):
         # self.before_list, self.after_list, self.change_list = read_images(root_path)
         self.train_dataset_before, self.train_dataset_after, self.train_dataset_change, self.test_dataset_before, self.test_dataset_after, self.test_dataset_change = read_images()
         if mode == 'train':
-            print('The train set loaded' + str(len(self.train_dataset_before)) + 'pictures')
+            print('The train set loaded ' + str(len(self.train_dataset_before)) + ' pictures')
         elif mode == 'test':
-            print('The test set loaded' + str(len(self.test_dataset_before)) + 'pictures')
+            print('The test set loaded ' + str(len(self.test_dataset_before)) + ' pictures')
 
     def __getitem__(self, item):
         if self.mode == 'train':

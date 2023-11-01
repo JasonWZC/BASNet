@@ -1,9 +1,9 @@
 """""
-lr为新的学习率
-base_lr为基准学习率
-epoch为迭代次数
-num_epoch为最大迭代次数
-power控制曲线的形状（通常大于1）
+lr is the new learning rate
+base_lr is the base learning rate
+epoch is the number of iterations
+num_epoch is the maximum number of iterations
+power controls the shape of the curve (usually greater than 1)
 """""
 
 def adjust_learning_rate_poly(optimizer, epoch, num_epochs, base_lr, power):

@@ -1,0 +1,2 @@
+Epoch:0|train loss:0.2604|train miou:0.4968|train oa:0.9215|train kappa:0.1034|train precision:0.2529|train recall:0.0924|train iou:0.0726|train F1:0.1353
+Epoch:1|train loss:0.1769|train miou:0.5031|train oa:0.9321|train kappa:0.1202|train precision:0.4411|train recall:0.0822|train iou:0.0745|train F1:0.1386

@@ -14,19 +14,19 @@ from poly import adjust_learning_rate_poly
 from model.BASNet import BASNet
 
 # ==========================Net===============================# Main function parameter settings
-net = BASNet(pretrained=True, normal_init=True).cuda()
+net = BASNet(pretrained=False, normal_init=True).cuda()
 
 # ========================Dataload============================# Load the dataset (Data augmentation is optional)
-from load_LEVIR import BuildingChangeDataset
+from load_TEST import BuildingChangeDataset
 
 # ================Implementation Details======================# Training parameter settings
 Epoch = 200                                             # Number of iterations
 lr = 0.001                                              # learning rate
 n_class = 2                                             # Categories
 F1_max = 0.80                                           # Starting weight storage point (Save storage space)
-batch_size = 32                                         # Batch size（GPU memory related）
+batch_size = 4                                         # Batch size（GPU memory related）
 
-root = r'./summaryLEVIR/BASNet/'                        # Store the root directory of experimental results
+root = r'./summaryTEST/BASNet/'                        # Store the root directory of experimental results
 
 
 import warnings

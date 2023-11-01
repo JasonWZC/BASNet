@@ -2,10 +2,9 @@
 import os
 os.chdir('../')
 import glob
-import argparse, torch,cv2
+import cv2
 from PIL import Image
 from torchvision import transforms
-import numpy as np
 from utils import *
 import warnings
 warnings.filterwarnings('ignore')
@@ -23,8 +22,8 @@ def predict_on_image(model):
     if not os.path.exists(f'{file_path}/{dir}'):
         os.makedirs(f'{file_path}/{dir}')
 
-    val_path_img1 = os.path.join('./predict/LEVIR', 'A')
-    val_path_img2 = os.path.join('./predict/LEVIR', 'B')
+    val_path_img1 = os.path.join('./predict/TEST', 'A')
+    val_path_img2 = os.path.join('./predict/TEST', 'B')
 
     img1_list = glob.glob(os.path.join(val_path_img1, '*.png'))  # glob.glob()返回一个某一种文件夹下面的某一类型文件路径列表
     img2_list = glob.glob(os.path.join(val_path_img2, '*.png'))
@@ -53,7 +52,7 @@ if __name__ == '__main__':
     print('load model  ...')
 
     model = BASNet(pretrained=True, normal_init=True)
-    model_path = './summaryLEVIR/BASNet/F1_0.9069_epoch_198.pth'
+    model_path = './summaryTEST/BASNet/F1_0.9069_epoch_198.pth'
 
     try:
         pretrained_dict = torch.load(model_path, map_location='cpu')

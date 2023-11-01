@@ -1,0 +1,2 @@
+Epoch:0|test loss:0.0876|test miou:0.5045|test oa:0.9911|test kappa:0.0344|test precision:0.3002|test recall:0.0188|test iou:0.0180|test F1:0.0354
+Epoch:1|test loss:0.0565|test miou:0.5200|test oa:0.9907|test kappa:0.0915|test precision:0.3020|test recall:0.0556|test iou:0.0493|test F1:0.0939
